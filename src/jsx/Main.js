@@ -1,4 +1,14 @@
 const Main = React.createClass({
+    contextTypes: {
+        router: React.PropTypes.object.isRequired
+    },
+    componentWillMount(){
+        //给路径赋默认值
+        var params = this.props.params;
+        if (!params.tag && !params.articleId) {
+            this.context.router.push("/tag/" + "ALL");
+        }
+    },
     getInitialState(){
         return {wheel: false}
     },
@@ -21,17 +31,11 @@ const Main = React.createClass({
         return (
           <div onWheel={this.onWheelDown}>
               <Header wheel={this.state.wheel}/>
-              <Content wheel={this.state.wheel}/>
+              <Content wheel={this.state.wheel} params={this.props.params}/>
               <Footer />
           </div>
 
         );
     }
 });
-ReactDOM.render(
-  <div >
-      <Main />
-  </div>
-  ,
-  document.getElementById('main')
-);
+

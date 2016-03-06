@@ -6,13 +6,13 @@ const LeftArea = React.createClass({
                   <div className="head"><h2>文章分类</h2></div>
                   <nav>
                       <ul>
-                          <li onClick={this.props.changeTag.bind(null,"ALL")}><a>ALL<i className="fa fa-angle-double-right "></i></a></li>
-                          <li onClick={this.props.changeTag.bind(null,"HTML/CSS")}><a >HTML/CSS<i className="fa fa-angle-double-right "></i></a></li>
-                          <li onClick={this.props.changeTag.bind(null,"JavaScript")}><a >JavaScript<i className="fa fa-angle-double-right "></i></a></li>
-                          <li onClick={this.props.changeTag.bind(null,"Project")}><a >Project<i className="fa fa-angle-double-right "></i></a></li>
-                          <li onClick={this.props.changeTag.bind(null,"React")}><a >React<i className="fa fa-angle-double-right "></i></a></li>
-                          <li onClick={this.props.changeTag.bind(null,"其他")}><a >其他<i className="fa fa-angle-double-right "></i></a></li>
-                          <li onClick={this.props.changeTag.bind(null,"随笔")}><a >随笔<i className="fa fa-angle-double-right "></i></a></li>
+                          <li ><Link to="/tag/ALL">ALL<i className="fa fa-angle-double-right "></i></Link></li>
+                          <li ><Link to="/tag/HTML&CSS" >HTML&CSS<i className="fa fa-angle-double-right "></i></Link></li>
+                          <li ><Link to="/tag/JavaScript">JavaScript<i className="fa fa-angle-double-right "></i></Link></li>
+                          <li ><Link to="/tag/Project" >Project<i className="fa fa-angle-double-right "></i></Link></li>
+                          <li ><Link to="/tag/React" >React<i className="fa fa-angle-double-right "></i></Link></li>
+                          <li ><Link to="/tag/其他" >其他<i className="fa fa-angle-double-right "></i></Link></li>
+                          <li ><Link to="/tag/随笔" >随笔<i className="fa fa-angle-double-right "></i></Link></li>
                       </ul>
                   </nav>
               </div>

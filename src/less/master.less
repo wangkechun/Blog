@@ -64,6 +64,13 @@ header {
     }
   }
   .logo, .logoSmall {
+    a{
+      color: #F3FAFB;
+      text-decoration: none;
+      &:hover{
+        text-decoration: none;
+      }
+    }
     color: #F3FAFB;
   }
   .logo {
@@ -113,8 +120,15 @@ header {
           .title {
             font-size: 1.8em;
             font-weight: 900;
-            color: hsla(190, 82%, 51%, 1);
-            text-shadow: 1px 1px #EFEFEF, 2px 2px #CCC;
+            a{
+              color: hsla(190, 82%, 51%, 1);
+              text-shadow: 1px 1px #EFEFEF, 2px 2px #CCC;
+              &:hover{
+                text-decoration: none;
+                color: #D0648A;
+                text-shadow: 1px 1px 1px #f2bed1;
+              }
+            }
           }
           .tag, .date {
             font-size: 1.05em;

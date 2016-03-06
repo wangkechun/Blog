@@ -15,8 +15,8 @@ const Header = React.createClass({
                       </li>
                   </ul>
               </nav>
-              <div className="logoSmall" style={css_display(this.props.wheel)}>CaoHuilin</div>
-              <div className="logo" style={css_display(!this.props.wheel)}>=CHL</div>
+              <div className="logoSmall" style={css_display(this.props.wheel)}><Link to="/tag/ALL">CaoHuilin</Link></div>
+              <div className="logo" style={css_display(!this.props.wheel)}><Link to="/tag/ALL">=CHL</Link></div>
               <span style={css_display(!this.props.wheel)}>Pursue beauty , Approach beauty , Achieve beauty</span>
           </header>
         )
