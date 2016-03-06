@@ -1,3 +1,5 @@
+
+
 //display属性的改变
 function css_display(value) {
     if (value) {
@@ -6,3 +8,30 @@ function css_display(value) {
         return {display: 'none'};
     }
 }
+function changeHeight(value){
+     if(value){
+         return{height:"150px"}
+     }else{
+         return{height:"256px"}
+     }
+}
+function changeMarginTop(value){
+    if(value){
+        return{marginTop :'150px'}
+    }else{
+        return{marginTop :'256px'}
+    }
+}
+
+
+//const content = `
+//
+//## adadad
+//
+//fsdfds
+//sdf
+//sdfsd
+//`;
+//
+//
+//const item={title:'aa', content, taag:['11']};;

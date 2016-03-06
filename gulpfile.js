@@ -21,7 +21,7 @@ gulp.task('less', function () {
 });
 
 gulp.task('jsx', function () {
-    return gulp.src([ "./src/jsx/Config.js","./src/jsx/Util.js", "./src/jsx/Calender.js", "./src/jsx/Caption.js", "./src/jsx/Content.js", "./src/jsx/Dates.js", "./src/jsx/Departments.js", "./src/jsx/Header.js", "./src/jsx/Inf.js", "./src/jsx/LeftArea.js", "./src/jsx/NoteBtn.js", "./src/jsx/NoteMe.js", "./src/jsx/RightArea.js", "./src/jsx/User.js", "./src/jsx/UserInf.js", "./src/jsx/Main.js","./src/jsx/Router.js"])
+    return gulp.src([ "./src/jsx/Article.js","./src/jsx/Config.js","./src/jsx/Util.js", "./src/jsx/Calender.js", "./src/jsx/Caption.js", "./src/jsx/Content.js", "./src/jsx/Dates.js", "./src/jsx/Departments.js", "./src/jsx/Header.js", "./src/jsx/Inf.js", "./src/jsx/LeftArea.js", "./src/jsx/NoteBtn.js", "./src/jsx/NoteMe.js", "./src/jsx/RightArea.js", "./src/jsx/User.js", "./src/jsx/UserInf.js", "./src/jsx/Main.js","./src/jsx/Router.js"])
         .pipe(react())
         .on('error', function(err){
             console.log(err);
@@ -41,6 +41,11 @@ gulp.task('copy_lib', function () {
         .pipe(gulp.dest('./public/lib'));
 });
 
+gulp.task('copy_font', function () {
+    return gulp.src('./src/font/*')
+        .pipe(gulp.dest('./public/font'));
+});
+
 gulp.task('watch', function () {
     gulp.watch('./src/jsx/*.js', ['jsx']);
     gulp.watch('./src/less/*.less', ['less']);
@@ -55,6 +60,5 @@ gulp.task('clean', function () {
 
 gulp.task('build', function () {
     runSequence('clean',
-        ['less', 'jsx', 'copy_img', 'copy_lib']);
+        ['less', 'jsx', 'copy_img', 'copy_lib' , 'copy_font']);
 });
-
