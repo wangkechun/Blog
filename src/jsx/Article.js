@@ -1,6 +1,8 @@
 'use strict';
+console.log("start")
 const ARTICLE = [
     {
+        id : 1,
         title:"编译Linux内核",
         tag:"其他",
         date:"2015-04-21",
@@ -11,8 +13,9 @@ const ARTICLE = [
         是我们在了解Linux内核的基础上根据自己的需 要、量身定制一个更高效，更稳定的内核，就需要我们手动去编译和配置内核里的各项相关的参数和信息了。`
     },
     {
+        id:2,
         title:"编译Linux内核2",
-        tag:"其他2",
+        tag:"HTML/CSS",
         date:"2015-04-22",
         description:" 2Linux内核是操作系统的核心，也是操作系统最基本的部分。",
         content:
