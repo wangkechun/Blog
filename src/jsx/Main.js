@@ -5,9 +5,12 @@ const Main = React.createClass({
     componentWillMount(){
         //给路径赋默认值
         var params = this.props.params;
-        if (!params.tag && !params.articleId) {
+        if (!params.tag && !params.article) {
             this.context.router.push("/tag/" + "ALL");
         }
+        document.addEventListener('scroll',(e)=>{
+            this.onScrollDown(e);
+        })
     },
     getInitialState(){
         return {wheel: false}
@@ -27,10 +30,18 @@ const Main = React.createClass({
             this.setState({wheel: false});
         }
     },
+    onScrollDown(){
+        let scrollTop = document.body.scrollTop;
+        if(scrollTop == 0){
+            this.setState({wheel: false});
+        }else{
+            this.setState({wheel: true});
+        }
+    },
     render(){
         return (
-          <div onWheel={this.onWheelDown}>
-              <Header wheel={this.state.wheel}/>
+          <div onWheel={this.onWheelDown} onScroll={()=>console.log('scroll')}>
+               <Header wheel={this.state.wheel}/>
               <Content wheel={this.state.wheel} params={this.props.params}/>
               <Footer />
           </div>

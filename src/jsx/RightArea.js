@@ -20,7 +20,7 @@ const RightArea = React.createClass({
 
 
         if (this.props.tag) {
-            console.log('render RightArea', TagHTML, TagHTML.length);
+            //console.log('render RightArea', TagHTML, TagHTML.length);
             return (
               <div className="rightArea">
                   <div className="nav">
@@ -32,7 +32,7 @@ const RightArea = React.createClass({
             )
         } else if(this.props.article) {
             let article = ARTICLE[this.props.article-1];
-            console.log(this.props.article);
+            //console.log(this.props.article);
             let articleHTML = (
               <div className="inside">
                   <h2 className="title">{article.title}</h2>
