@@ -8,10 +8,10 @@ const Footer = React.createClass({
                           <a href="https://hi-hi.cn/chlblog/" target="_blank">Home</a>
                       </li>
                       <li>
-                          <a href="https://hi-hi.cn/chlblog/" target="_blank">Resume</a>
+                          <a href="https://hi-hi.cn/chlresume/" target="_blank">Resume</a>
                       </li>
                       <li>
-                          <a href="#" target="_blank">Project</a>
+                          <a href="https://github.com/caohuilin" target="_blank">Project</a>
                       </li>
                   </ul>
                   <ul className="contact">

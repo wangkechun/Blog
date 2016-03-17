@@ -10,14 +10,14 @@ function css_display(value) {
 }
 function changeHeight(value){
      if(value){
-         return{height:"150px"}
+         return{height:"60px"}
      }else{
          return{height:"256px"}
      }
 }
 function changeMarginTop(value){
     if(value){
-        return{marginTop :'150px'}
+        return{marginTop :'60px'}
     }else{
         return{marginTop :'256px'}
     }

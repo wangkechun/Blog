@@ -29,14 +29,19 @@ header {
   top: 0;
   left: 0;
   z-index: 100;
+  display: flex;
+  align-items:center;//子元素垂直居中
   //transition: all 0.2s ease-in-out;
+  .blank{
+    flex:1;
+  }
   nav {
-    .fr();
-    margin-top: 0.4em;
+    height: 100%;
     ul {
+      height:60px;
       display: flex;
+      align-items:center;//子元素垂直居中
       li {
-        float: left;
         padding: 0.4em 2.2em;
         border-left: 2px solid #F3FAFB;
         &:first-child {
@@ -56,9 +61,7 @@ header {
             color: #D0648A;
             text-shadow: 1px 1px 1px #f2bed1;
           }
-          &:visited{
-            color: #F3FAFB;
-          }
+
         }
       }
     }
@@ -79,11 +82,15 @@ header {
     padding: 5% 0 1% 10%;
   }
   .logoSmall {
+    height:60px;
     font-size: 30px;
-    padding: 1% 0 1% 10%;
+    padding-left: 10%;
     position: fixed;
     top: 0;
     left: 0;
+    a{
+      line-height: 60px;
+    }
   }
   span {
     display: block;
@@ -203,6 +210,12 @@ header {
       }
     }
     .article{
+      ul, ol, dir{
+        list-style-type: disc;
+      }
+      li {
+        list-style: disc;
+      }
       margin:43px 0 50px 50px;
       box-shadow: 5px 10px 10px #ddd;
       background: #F3FAFB;
@@ -221,19 +234,48 @@ header {
           padding: 0 20px 0 10px;
         }
         .description {
+          padding:10px 90px;
+          font-size: 16px;
           line-height: 1.7em;
-          font-size: 1.35em;
           margin: 0 0 20px 0;
         }
         .more {
           line-height: 1.7em;
-          font-size: 1.05em;
+          font-size: 16px;
           margin: 0 0 20px 0;
           a {
             color: #D0648A;
             text-shadow: 1px 1px 1px #f2bed1;
           }
         }
+        h1, h2, h3, h4, h5, h6 {
+          font-weight: 700;
+          line-height: 1.7;
+          cursor: text;
+          position: relative;
+          margin: 1em 0 15px;
+          padding: 0; }
+
+        h1 {
+          font-size: 2.5em;
+          border-bottom: 1px solid #ddd; }
+
+        h2 {
+          font-size: 2em;
+          border-bottom: 1px solid #eee; }
+
+        h3 {
+          font-size: 1.5em; }
+
+        h4 {
+          font-size: 1.2em; }
+
+        h5 {
+          font-size: 1em; }
+
+        h6 {
+          color: #777;
+          font-size: 1em; }
       }
     }
   }
